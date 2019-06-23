@@ -1,4 +1,5 @@
 run("Blobs (25K)");
+run("Median...", "radius=3");
 setAutoThreshold("Default dark");
 //run("Threshold...");
 setAutoThreshold("Default dark");
@@ -9,6 +10,9 @@ run("Close");
 run("Invert LUT");
 //setTool("dropper");
 //setTool("hand");
+run("Set Measurements...", "area mean center perimeter bounding integrated median redirect=None decimal=3");
 run("Analyze Particles...", "display exclude summarize add");
 saveAs("Results", "C:/Users/a1759947/Desktop/Results.csv");
+run("Histogram");
+saveAs("Results", "C:/data Iveta/My-repository/Histogram of blobs.csv");
 run("Close");
