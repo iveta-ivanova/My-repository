@@ -1,0 +1,14 @@
+run("Blobs (25K)");
+setAutoThreshold("Default dark");
+//run("Threshold...");
+setAutoThreshold("Default dark");
+//setThreshold(0, 125);
+setOption("BlackBackground", true);
+run("Convert to Mask");
+run("Close");
+run("Invert LUT");
+//setTool("dropper");
+//setTool("hand");
+run("Analyze Particles...", "display exclude summarize add");
+saveAs("Results", "C:/Users/a1759947/Desktop/Results.csv");
+run("Close");
